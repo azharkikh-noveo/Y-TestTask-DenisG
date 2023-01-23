@@ -7,7 +7,6 @@ import Foundation
 
 #if DEBUG
 
-// TODO: we can make this as property wrapper with slightly better syntax
 public final class MockAsyncVariable<T> {
     private var value: T!
     private let group = DispatchGroup()

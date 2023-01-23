@@ -21,7 +21,7 @@ public final class DependencyContainer {
     private let inTests: Bool
     
     // Externally setting `inTests` might be useful in DependencyContainerSpec,
-    // when we want to simulate "not test" environment
+    // when we want to simulate "in app" environment
     init(inTests: Bool = DependencyContainer.isInTestEnv) {
         self.inTests = inTests
     }

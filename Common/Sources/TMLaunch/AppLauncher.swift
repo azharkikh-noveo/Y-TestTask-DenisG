@@ -29,6 +29,7 @@ final class AppLauncher {
     private let apiConfigurationInteractor = getAPIConfigurationInteractor()
     private let alertErrorInteractor = getAlertErrorInteractor()
     private let logger = getLogger()
+    private let taskInteractor = getTaskInteractor()
     
     public weak var delegate: AppLauncherDelegate?
     
@@ -59,7 +60,7 @@ private extension AppLauncher {
             return
         }
         
-        Task { @MainActor in
+        taskInteractor.runTask { @MainActor [self] in
             loadingVC?.indicateActivity(true)
             
             do {

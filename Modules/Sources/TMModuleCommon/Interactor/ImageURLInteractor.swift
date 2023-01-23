@@ -23,6 +23,8 @@ final class ImageURLInteractor {
     private let logger = getLogger()
 }
 
+// MARK: - ImageURLInteractorType
+
 extension ImageURLInteractor: ImageURLInteractorType {
     
     func getPosterURL(posterPath: String?) -> URL? {

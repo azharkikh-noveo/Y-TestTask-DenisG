@@ -8,8 +8,6 @@ import TMCore
 
 @testable import TMDiscover
 
-#if DEBUG
-
 extension Seeds {
     
     enum MovieDetails {
@@ -37,5 +35,3 @@ private extension Seeds.MovieDetails {
         )
     }
 }
-
-#endif

@@ -36,7 +36,10 @@ protocol LoadMoviesListInteractorType {
 final class LoadMoviesListInteractor {
     private let discoverAPI = getDiscoverAPI()
     private let logger = getLogger()
+    private let taskInteractor = getTaskInteractor()
 }
+
+// MARK: - LoadMoviesListInteractorType
 
 extension LoadMoviesListInteractor: LoadMoviesListInteractorType {
     
@@ -49,11 +52,9 @@ extension LoadMoviesListInteractor: LoadMoviesListInteractorType {
             update: update
         )
         
-        return SubscriptionToken(loadNext: {
-            Task {
-                // start show dynamic loading
+        return SubscriptionToken(loadNext: { [weak self] in
+            self?.taskInteractor.runTask {
                 await pagesLoader.loadNextPageIfNeeded()
-                // stop show dynamic loading
             }
         })
     }
@@ -100,6 +101,8 @@ fileprivate actor PagesLoader {
         }
     }
 }
+
+// MARK: - Constants
 
 private extension PagesLoader {
     enum Constants {

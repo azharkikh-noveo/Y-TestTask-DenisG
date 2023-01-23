@@ -14,6 +14,8 @@ public final class ImageURLInteractorMock {
     public init() {}
 }
 
+// MARK: - ImageURLInteractorType
+
 extension ImageURLInteractorMock: ImageURLInteractorType {
     
     public func getPosterURL(posterPath: String?) -> URL? {

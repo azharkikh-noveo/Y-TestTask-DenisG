@@ -5,6 +5,8 @@
 
 import Foundation
 
+#if DEBUG
+
 public struct TestError: Error, LocalizedError {
     
     public init() {}
@@ -13,3 +15,5 @@ public struct TestError: Error, LocalizedError {
         "Testing error description"
     }
 }
+
+#endif

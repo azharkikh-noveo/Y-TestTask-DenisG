@@ -20,5 +20,5 @@ public protocol WindowType: AnyObject {
 extension UIWindow: WindowType {}
 
 extension UIWindow {
-    static let shared = UIWindow(frame: UIScreen.main.bounds)
+    static let shared = UIWindow(frame: CGRect(origin: .zero, size: getMainScreen().size))
 }

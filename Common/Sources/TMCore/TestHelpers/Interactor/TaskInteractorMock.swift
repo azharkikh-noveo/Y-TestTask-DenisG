@@ -5,6 +5,8 @@
 
 import Foundation
 
+#if DEBUG
+
 protocol AnyTask {
     func awaitForResult() async
 }
@@ -39,3 +41,5 @@ extension TaskInteractorMock: TaskInteractorType {
         return task
     }
 }
+
+#endif

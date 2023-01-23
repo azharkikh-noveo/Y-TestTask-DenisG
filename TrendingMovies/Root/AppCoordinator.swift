@@ -34,11 +34,7 @@ final class AppCoordinator {
 
 private extension AppCoordinator {
     func moviesListRouter() -> MoviesListScene.RouterType {
-        .init { [weak self] event in
-            guard let strongSelf = self else {
-                return
-            }
-            
+        return .init(with: self) { strongSelf, event in
             switch event {
             case let .didSelectMovie(movieId):
                 strongSelf.pushMovieDetails(movieId: movieId)
