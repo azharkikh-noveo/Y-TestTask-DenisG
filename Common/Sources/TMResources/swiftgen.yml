@@ -1,0 +1,19 @@
+output_dir: ./Generated
+
+xcassets:
+  inputs: .
+  outputs:
+    templateName: swift5
+    output: Images.swift
+    params:
+      publicAccess: true
+      enumName: Images
+
+strings:
+  inputs: Resources/en.lproj
+  filter: .+\.strings$
+  outputs:
+    templateName: structured-swift5
+    output: Localizable.swift
+    params:
+      publicAccess: true

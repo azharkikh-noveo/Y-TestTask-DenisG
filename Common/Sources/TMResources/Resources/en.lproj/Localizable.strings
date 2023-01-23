@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  TMResources
+*/
+
+"LanguageCode" = "en-US";
+
+"Common.ErrorAlert.Title" = "Error";
+"Common.ErrorAlert.TapToRetry" = "Tap to retry";
+"Common.ErrorAlert.DefaultMessageBody" = "Unknown error occured";
+
+"Error.HTTPError" = "HTTP error: %@.";
+"Error.ConnectionError.NoInternet" = "No internet connection";
+"Error.ConnectionError.Timeout" = "Server did not respond to request";
+"Error.ConnectionError.Other" = "Other connection issue";
+
+"MoviesList.Title" = "Discover";
+
+"MovieDetails.ReleaseYear" = "Year: %@";

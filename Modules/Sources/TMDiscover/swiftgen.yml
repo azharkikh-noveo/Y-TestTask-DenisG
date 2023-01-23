@@ -1,0 +1,7 @@
+output_dir: ./Generated
+
+ib:
+  inputs: .
+  outputs:
+    templateName: scenes-swift5
+    output: Storyboards.swift

@@ -1,0 +1,11 @@
+//
+//  Staging.xcconfig
+//  TrendingMovies
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Common"
+
+THEMOVIEDB_API_KEY=c9856d0cb57c3f14bf75bdc6c063b8f3

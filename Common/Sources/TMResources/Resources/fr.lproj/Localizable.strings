@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  TMResources
+*/
+
+"LanguageCode" = "fr-FR";
+
+"Common.ErrorAlert.Title" = "Erreur";
