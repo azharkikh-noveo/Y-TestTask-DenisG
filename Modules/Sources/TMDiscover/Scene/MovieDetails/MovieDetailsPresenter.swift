@@ -36,7 +36,7 @@ final class MovieDetailsPresenter {
 
 extension MovieDetailsPresenter: MovieDetailsPresenterType {
     func viewDidLoad() {
-        taskInteractor.runTask { [self] in
+        taskInteractor.runTask {  @MainActor [self] in
             do {
                 let movieDetails = try await loadMoviesDetailsInteractor.getMovieDetails(movieId: movieId)
                 configureView(with: movieDetails)

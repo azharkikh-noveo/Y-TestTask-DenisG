@@ -53,7 +53,7 @@ extension LoadMoviesListInteractor: LoadMoviesListInteractorType {
         )
         
         return SubscriptionToken(loadNext: { [weak self] in
-            self?.taskInteractor.runTask {
+            self?.taskInteractor.runTask { @MainActor in
                 await pagesLoader.loadNextPageIfNeeded()
             }
         })
