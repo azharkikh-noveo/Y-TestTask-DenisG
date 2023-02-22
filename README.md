@@ -22,6 +22,8 @@ Models are presented as immutable structures.
 
 The movies in the list are loaded by pages. When the movies list is about to reach bottom.
 
+Limited tests are presented in the project. 
+
 ## User interface
 
 The UI is written in UIKit + storyboards.
