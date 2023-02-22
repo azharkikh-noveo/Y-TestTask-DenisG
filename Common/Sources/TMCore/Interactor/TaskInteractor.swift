@@ -12,8 +12,8 @@ public let getTaskInteractor = dependencyContainer.bind(
 
 public protocol TaskInteractorType {
     @discardableResult
-    func runTask<Success: Sendable>(
-        operation: @escaping @Sendable () async -> Success
+    func runMainTask<Success: Sendable>(
+        operation: @MainActor @escaping @Sendable () async -> Success
     ) -> Task<Success, Never>
 }
 
@@ -21,8 +21,8 @@ final class TaskInteractor {}
 
 extension TaskInteractor: TaskInteractorType {
     @discardableResult
-    func runTask<Success: Sendable>(
-        operation: @escaping @Sendable () async -> Success
+    func runMainTask<Success: Sendable>(
+        operation: @MainActor @escaping @Sendable () async -> Success
     ) -> Task<Success, Never> {
         return Task(operation: operation)
     }

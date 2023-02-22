@@ -60,7 +60,7 @@ private extension AppLauncher {
             return
         }
         
-        taskInteractor.runTask { @MainActor [self] in
+        taskInteractor.runMainTask { [self] in
             loadingVC?.indicateActivity(true)
             
             do {

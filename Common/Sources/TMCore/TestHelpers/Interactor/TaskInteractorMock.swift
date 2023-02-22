@@ -33,8 +33,8 @@ public final class TaskInteractorMock {
 
 extension TaskInteractorMock: TaskInteractorType {
     
-    public func runTask<Success>(
-        operation: @escaping @Sendable () async -> Success
+    public func runMainTask<Success>(
+        operation: @MainActor @escaping @Sendable () async -> Success
     ) -> Task<Success, Never> where Success : Sendable {
         let task = Task(operation: operation)
         taskHistory.append(task)
